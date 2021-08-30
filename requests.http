@@ -1,11 +1,20 @@
-get http://localhost:3000/first_movie
+get http://localhost:3000/actors/
 
 ###
 
-get http://localhost:3000/single_actor
+get http://localhost:3000/actors/1
 Content-Type: application/json
 
 
 ###
 post http://localhost:3000/single_actor
 Content-Type: application/json
+
+
+###
+get http://localhost:3000/movies
+Content-Type: application/json
+
+
+###
+get http://localhost:3000/movies/1
