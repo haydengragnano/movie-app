@@ -14,14 +14,14 @@ Rails.application.routes.draw do
   get "/actors" => "actors#index"
   post "/actors" => "actors#create"
   get "/actors/:id" => "actors#show"
-  get "/actors/:id" => "actors#update"
-  get "/actors/:id" => "actors#destroy"
+  patch "/actors/:id" => "actors#update"
+  delete "/actors/:id" => "actors#destroy"
 
   get "/movies" => "movies#index"
   post "/movies" => "movies#create"
   get "/movies/:id" => "movies#show"
-  get "/movies/:id" => "movies#update"
-  get "/movies/:id" => "movies#destroy"
+  patch "/movies/:id" => "movies#update"
+  delete "/movies/:id" => "movies#destroy"
 
 
 end

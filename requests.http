@@ -18,3 +18,21 @@ Content-Type: application/json
 
 ###
 get http://localhost:3000/movies/1
+
+###
+patch http://localhost:3000/movies/4
+Content-Type: application/json
+
+{
+  "english": true,
+  "director": "ryan ball"
+}
+
+###
+PATCH http://localhost:3000/actors/2
+Content-Type: application/json
+
+{
+  "age": 33,
+  "gender": "male"
+}
