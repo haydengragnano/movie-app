@@ -7,7 +7,7 @@ Content-Type: application/json
 
 
 ###
-post http://localhost:3000/actor/3
+post http://localhost:3000/actors/3
 Content-Type: application/json
 
 {
@@ -49,5 +49,35 @@ Content-Type: application/json
     "year": 2011,
     "plot": "An action drama about a mysterious Hollywood stuntman and mechanic moonlighting as a getaway driver finding himself in trouble when he helps out his neighbor.",
     "director": "Nicolas Winding Refn",
-    "english": true
+    "english": true    
 }
+
+
+### Users create (signup)
+  POST http://localhost:3000/users
+  Content-Type: application/json
+
+  {
+    "name": "forrest",
+    "email": "forrest@gmail.com",
+    "password": "password",
+    "password_confirmation": "password"
+  }
+
+### Sessions create (login)
+  POST http://localhost:3000/sessions
+  Content-Type: application/json
+
+  {
+    "email": "forrest@gmail.com",
+    "password": "password"
+  }
+
+### Movies create
+  POST http://localhost:3000/movies
+  Authorization: Bearer 
+  Content-Type: application/json
+
+  {
+    
+  }
