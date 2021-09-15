@@ -81,3 +81,14 @@ Content-Type: application/json
   {
     
   }
+
+  ### Movies create
+  POST http://localhost:3000/movie_genre
+  Authorization: Bearer 
+  Content-Type: application/json
+
+  {
+    "movie_id":  ,
+    "genre_id":
+    
+  }
