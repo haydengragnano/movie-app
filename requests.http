@@ -58,18 +58,18 @@ Content-Type: application/json
   Content-Type: application/json
 
   {
-    "name": "forrest",
-    "email": "forrest@gmail.com",
+    "name": "kailey",
+    "email": "kailey@gmail.com",
     "password": "password",
     "password_confirmation": "password"
   }
 
-### Sessions create (login)
+### Sessions create (login)ovo
   POST http://localhost:3000/sessions
   Content-Type: application/json
 
   {
-    "email": "forrest@gmail.com",
+    "email": "kailey@gmail.com",
     "password": "password"
   }
 
@@ -82,7 +82,7 @@ Content-Type: application/json
     
   }
 
-  ### Movies create
+### Movies create
   POST http://localhost:3000/movie_genre
   Authorization: Bearer 
   Content-Type: application/json
@@ -92,3 +92,14 @@ Content-Type: application/json
     "genre_id":
     
   }
+
+### movies update
+  PATCH http://localhost:3000/movies/6
+  Authorization: Bearer 
+  Content-Type: application/json
+
+{
+  "image":"https://lumiere-a.akamaihd.net/v1/images/h_liloandstitch_mobile_19755_d3c7924b.jpeg?region=0,0,640,480"
+
+}
+

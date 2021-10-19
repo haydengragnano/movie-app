@@ -1,6 +1,6 @@
 class MoviesController < ApplicationController
 
-  before_action :authenticate_admin, except: [:index, :show]
+  ##before_action :authenticate_admin, except: [:index, :show]
 
   def index
     movies = Movie.all
@@ -13,7 +13,8 @@ class MoviesController < ApplicationController
       year: params[:year],
       plot: params[:plot],
       director: params[:director],
-      english: params[:english]
+      english: params[:english],
+      image: params[:image]
     )
     if movie.save
       render json: movie.as_json
@@ -34,6 +35,7 @@ class MoviesController < ApplicationController
     movie.plot = params[:plot] || movie.plot
     movie.director = params[:director] || movie.director
     movie.english = params[:english] || movie.english
+    movie.image = params[:image] || movie.image
     if movie.save
       render json: movie.as_json
     else
@@ -42,7 +44,7 @@ class MoviesController < ApplicationController
   end
 
   def destroy
-    movie = Movie.find(params{:id})
+    movie = Movie.find(params[:id])
     movie.destroy
     render json: {message: "I hope that wasnt importnat"}
     
